@@ -1,0 +1,80 @@
+// The following program will execute the Rock, Paper, Scissors, Lizard, Spock game. User against Computer.
+
+#include <iostream>
+#include <stdlib.h>
+
+int main() {
+
+// live long and prosper
+srand (time(NULL));
+
+int computer = rand() % 5 + 1;
+
+int user = 0;
+
+std::cout << "====================\n";
+std::cout << "rock paper scissors lizards spock shoot!\n";
+std::cout << "====================\n";
+ 
+std::cout << "1) ✊\n";
+std::cout << "2) ✋\n";
+std::cout << "3) ✌️\n";
+//Yes that's actually a crocodile
+std::cout << "4) 🐊\n";
+std::cout << "5) 🖖\n";
+ 
+std::cout << "shoot! ";
+std::cin >> user;
+
+if (user == computer) {
+  std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "It's a tie!";
+} else if (user == 1 && computer == 4) {
+   std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 1 && computer == 3) {
+   std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 2 && computer == 1) {
+ std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 2 && computer == 5) {
+ std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 3 && computer == 2) {
+   std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 3 && computer == 4) {
+   std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 4 && computer == 5) {
+   std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 4 && computer == 2) {
+   std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 5 && computer == 1) {
+   std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else if (user == 5 && computer == 3) {
+   std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "User wins!";
+} else {
+    std::cout << "User shoots: " << user << "\n";
+  std::cout << "Computer shoots: " << computer << "\n";
+  std::cout << "Computer wins!";
+}
+
+  return 0;
+}
