@@ -1,0 +1,279 @@
+#include <iostream>
+
+int main() {
+  std::cout << "========================================== \n";
+  std::cout << "Choose Your Own Adventure\n - Assassin's Apprentice\n";
+  std::cout << "========================================== \n";
+  std::cout << "~~~The Beginning~~~\n";
+  std::cout << "'FitzChivalry! You shall accompany King-In-Waiting Verity's retinue on their way to Tilth. See to it that Tilth Duchy complies with Verity's demands for more funds to build warships for our skirmishes with the Red-Ship Raiders.'\n";
+
+std::string mission;
+
+  std::cout << "Do you accept this mission? (Enter yes OR no)";
+  std::cin >> mission;
+
+if (mission == "yes") {
+  std::cout << "'Good! Your target is the Duke of Tilth, Charming. Should he refuse to assist Verity...you know what to do.'\n";
+} else if (mission == "no"){
+  std::cout << "  ∧＿＿∧\n";
+  std::cout << "（ ；´Д｀） \n";
+  std::cout << "You are executed for refusing the mission. What, did you really believe royal assassins could choose?\n";
+  return 0;
+} else {
+  std::cout << "What are you doing! Are you loyal to the King or not? This is your last chance, otherwise, goodbye.\n";
+    std::cin >> mission;
+}
+
+// The shadows vs the kitchens
+
+int investigate;
+
+std::cout << "The journey to Tilth was a long one. Filthy, tired, and hungry, you follow the smells of baking bread and cooked meat towards the keep's kitchens. You are just about to cross the threshold when you spot some shadowy figures lurking around the corner. You hear a sudden, high-pitch yelp from the shadows.\n";
+std::cout << "What will you do? (1 or 2)\n";
+std::cout << "1) Investigate the noise\n";
+std::cout << "2) Continue to the kitchens\n";
+std::cin >> investigate;
+
+for (int i = 0; i < 3 && investigate != 1 && investigate != 2; i++) {
+    std::cout << "What are you doing! Make a choice already. This is your last chance, otherwise, goodbye.\n";
+    std::cin >> investigate;
+}
+
+int helpOne;
+int helpTwo;
+char teaTime;
+char followNoble;
+
+
+if (investigate == 1) {
+// investigate the noise
+  std::cout << "You venture into the shadows and discover three children surrounding a small, dirty puppy. The puppy appears to be a stray. The children are giggling and taunting the pup whose tail is down with fear. What will you do?\n";
+  std::cout << "1) Help the pup\n";
+  std::cout << "2) Talk some sense into the children\n";
+  std::cin >> helpOne;
+
+  // Following helpOne Scenario - help the pup or tell the children off
+
+  for (int i = 0; i < 3 && helpOne != 1 && helpOne != 2 && helpOne != 3; i++) {
+      std::cout << "What are you doing! Make a choice already. This is your last chance, otherwise, goodbye.\n";
+      std::cin >> helpOne;
+    }
+
+  if (helpOne == 1) {
+// rescue the pup
+    std::cout << "You briefly consider what Chade would do if he was approaching this scene. But gut instinct took over, and you rush to rescue the small pup. You shove aside the small children (the little monsters) and scoop the pup into your arms.\n";
+    std::cout << "You spin wildly around the courtyard for an exit, but the children's cries brought the attention of the keep's guards.\n";
+    std::cout << "Unfortunately, one of the children is none other than the heir to Duke Charming. The Duke rages on about your uncouth behavior and Verity is forced to send you back to Buckkeep in disgrace.\n";
+   std::cout << "And the pup is returned to the evil child.\n";
+   std::cout << "At least you get to keep your head.\n"; 
+    std::cout << "THE END\n";
+   return 0;
+  } else if (helpOne == 2) {
+// talk to the children
+   std::cout << "You approach the children and calmly ask them to stop tormenting the puppy.\n";
+    std::cout << "Your reproachful tone and calm demeanor made the children realize their unworthy behavior,and they apologize before trudging off into the keep.\n";
+    std::cout << "Just as you were about to return to the kitchens, a well-dressed person approaches you...\n";
+    std::cout << "'Greetings good, sir. I could not help but admire how you handled that situation with the children. Were you aware that one of them is the heir apparent to Duke Charming?\n";
+    std::cout << "'Of course, you weren't! But that makes your actions no less admirable. Please, good sir, follow me for I should dearly love to introduce you to the Duke.\n";
+    std::cout << "A) Go with this well-dressed and well-connected noble.\n";
+    std::cout << "B) Decline the invitation.\n";
+    std::cin >> followNoble;
+    
+    for (int i = 0; i < 3 && followNoble != 'A' && followNoble != 'B'; i++) {
+      std::cout << "What are you doing! Make a choice already. This is your last chance, otherwise, goodbye.\n";
+      std::cin >> followNoble;
+    }
+    if (followNoble == 'A') {
+// follow the noble
+      std::cout << "You accept the noble's invitation and are promptly led up to the tallest tower in the keep.\n";
+      std::cout << "There you find the Duke and his child taking afternoon tea before the feast. The room is luxurious beyond your reckoning with shimmering silver and glaring gold on every surface and decor. You had no idea wealth could be spent so frivolously, and you wonder how Tilth can continue to deny warships to King Shrewd.\n";
+      std::cout << "The Duke thanks you profusely for your actions. The child shifts uncomfortably in the chair, but says nothing. And the noble takes you back to the hall for the feast.\n";
+    } else if (followNoble == 'B') {
+// don't follow the noble
+      std::cout << "'Inpudent churl!' the noble declared. And you are dragged off to the stocks for your disrepectful behavior.\n";
+      std::cout << "THE END\n";
+      return 0;
+    }
+  } else {
+    std::cout << "Well if you're not going to choose, you may as well just stop playing. Goodbye.\n";
+    std::cout << "THE END\n";
+    return 0;
+  }
+} else if (investigate == 2) {
+// continue to the kitchens
+  std::cout << "You decide to ignore the yelp and continue on to the kitchens. The kitchens are full and bustling with noise and delicious aromas. The cooks are busy preparing for Verity's welcome feast. Servants bump into each other as they flow in and out, handling this cask or that basket. You feel sure no one will notice a few missing pasties for a hungry boy\n";
+  std::cout << "1) Steal a pasty.\n";
+  std::cout << "2) Ask a cook for a pasty.\n";
+  std::cin >> helpTwo;
+// Following helpTwo Scenario - steal or ask
+
+  for (int i = 0; i < 3 && helpTwo != 1 && helpTwo != 2; i++) {
+    std::cout << "What are you doing! Make a decision already. This is your last chance, otherwise, goodbye.\n";
+    std::cin >> helpTwo;
+    }
+
+  if (helpTwo == 1) {
+// stealing a pasty
+    std::cout << "Following Chade's tutelage, several meat pasties went unnoticed into your tunic.\n";
+    std::cout << "But just as you were about to leave, a guard bumps into you drunkenly. The pasties fall onto the ground with a SPLAT! and all heads turn to you.\n";
+    std::cout << "'THIEF!!!' the cook cried.\n"; 
+    std::cout << "And you are pursued by a crowd of angry servants from the kitchens to the courtyard and to the gates. The guards throw you out despite your protests (it was only a pasty! Okay fine, it was two.).\n";
+    std::cout << "Verity, shamed by your behavior, orders you to go back to Buckkeep on foot!\n";
+    std::cout << "THE END\n";
+    return 0;
+  } else if (helpTwo == 2) {
+// asking for a pasty
+    std::cout << "You politely ask one of the cooks shaping dough for a meat pasty.\n";
+    std::cout << "The cook gladly hands you one, fresh from the oven, and says, 'Aye, boy, of course you can have a bite before the feast!' \n";
+    std::cout << "'If you don't mind, after you've finished with that pasty, could you send this tray of tea up to the Duke?\n 'Shelby usually does this, but what with the feast and goings-on, we've all got our hands full!\n";
+    std::cout << "A) Take the tea tray\n";
+    std::cout << "B) Refuse to help the cook\n";
+    std::cin >> teaTime;
+    for (int i = 0; i < 3 && teaTime != 'A' && teaTime != 'B'; i++) {
+      std::cout << "What are you doing! Will you or won't you? This is your last chance, otherwise, goodbye.\n";
+      std::cin >> teaTime;
+    }
+    if (teaTime == 'A') {
+// help the cook
+      std::cout << "You accept and the Duke's head is literally delivered to you on a tray of dainty tea things.\n";
+      std::cout << "The Duke is alone when you enter the opulent chambers. You look around and see all the wealth of Tilth has been spent on the Duke's comfort.\n";
+      std::cout << "Disgusted, you slip a colorless and tasteless poison into the teapot before you leave.\n";
+      std::cout << "Later at the feast, all the keep waits hungrily for the Duke to make his entrance. The Duke's steward rushes into the hall, and exclaims:\n";
+      std::cout << "'MURDER!!!'\n";
+      std::cout << "Somehow, the steward spots and recognizes you in the crowd before you can slip into the shadows. 'There's the murderer! He has poisoned the TEA THINGS!' \n";
+      std::cout << "Surprisingly, the entire hall turns against you and you are arrested and thrown into the dungeons.\n";
+      std::cout << "THE END. But hey, technically, you did the thing.\n";
+      return 0;
+   } else if (teaTime == 'B') {
+// don't help the cook
+      std::cout << "The cook frowns at you. 'Well, I suppose you must have some other duties to get on with...'\n";
+  } else {
+    std::cout << "What are you doing! Will you or won't you? This is your last chance, otherwise, goodbye.\n";
+      std::cin >> teaTime;
+    }
+  } else {
+  std::cout << "Well if you're not going to choose, you may as well just stop playing. Goodbye.\n";
+    std::cout << "THE END\n";
+  return 0;
+  }
+
+} else {
+  std::cout << "Well if you're not going to choose, you may as well just stop playing. Goodbye.\n";
+  std::cout << "THE END\n";
+  return 0;
+}
+std::cout << "\n";
+std::cout << "======The Feast======\n";
+std::cout << "\n";
+std::cout << "Later at the feast, all the keep waits hungrily for the Duke to arrive.\n At last, after what feels like an eternity, the Duke and his family sweeps into the great hall, richly dressed and powdered.\n";
+std::cout << "In contrast, King-In-Waiting Verity is dressed simply.\n";
+std::cout << "You overhear several conversations comparing Duke Charming and Verity. Rumors of the empty royal treasury flowed as easily as the wine that evening.\n";
+std::cout << "At last, as the night draws to a close, you notice Verity giving you an inperceptible nod. And you slip off quietly to his chambers for further instructions.\n";
+std::cout << "In Verity's study, he says simply, 'Be prepared tomorrow night, I will make my decision before supper.'\n";
+std::cout << "\n";
+std::cout << "======The Next Night======\n";
+std::cout << "\n";
+
+int choice;
+char wine;
+char charm;
+
+std::cout << "Discussions between Duke Charming and King-In-Waiting Verity have ended poorly. Verity advises you to find a way to get rid of the Duke, so he can 'negotiate' with the heir apparent, a nine year old child...\n";
+std::cout << "1) Go to the kitchens\n";
+std::cout << "2) Go to the Duke's chambers\n";
+std::cin >> choice;
+ for (int i = 0; i < 3 && choice != 1 && choice != 2; i++) {
+      std::cout << "What are you doing! How are you going to get rid of the Duke? This is your last chance, otherwise, goodbye.\n";
+      std::cin >> choice;
+      }
+
+  if (choice == 1) {
+// kitchens again
+      std::cout << "You make your way back to the kitchens. The place is quiet now, with just one servant fixing up a tray.\n";
+      std::cout << "Before you can turn around to leave, the servant spots you and exclaims, 'There you are! You're mighty late, I'll say!'\n";
+      std::cout << "A) Yes, sorry about that\n";
+      std::cout << "B) I don't know what you're going on about\n";
+      std::cin >> wine;
+
+  for (int i = 0; i < 3 && wine != 'A' && wine != 'B'; i++) {
+      std::cout << "What are you doing! They asked you a question, it's only polite to answer. This is your last chance, otherwise, goodbye.\n";
+      std::cin >> wine;
+      }
+      switch (wine) {
+        case 'A':
+        // Take the tray
+        std::cout << "You accept the tray with a hurried bob of acknowledgement and rush out the kitchen with it .\n";
+        std::cout << "By the hand of Providence, you slip your traceless poison powder into the decanter of wine and report to the Duke's chambers.\n";
+        std::cout << "The lazy guards didn't even bother to look at you before admitting you into the Duke's chambers. Before you leave, you watch the Duke drain his wineglass.\n";
+        std::cout << "MISSION ACCOMPLISHED!\n";
+        std::cout << "THE END\n";
+        return 0;
+        break;
+        case 'B':
+        // Refuse the tray
+        std::cout << "Like an idiot, you refuse the proffered tray and walk out the kitchens.\n";
+        std::cout << "FAILED MISSION\n";
+        std::cout << "THE END\n";
+        return 0;
+        break;
+        default: 
+          for (int i = 0; i < 3 && wine != 'A' && wine != 'B'; i++) {
+        std::cout << "What are you doing! They asked you a question, it's only polite to answer. This is your last chance, otherwise, goodbye.\n";
+       std::cin >> wine;
+          }
+        }
+
+  } else if (choice == 2) {
+// the Duke's chambers
+    std::cout << "You slip off quietly into towards the Duke's chambers. The halls are deserted though you jump at every flickering shadow you pass by.\n";
+    std::cout << "Outside the chambers, you spot two bored-looking guards shuffling on their feet.\n";
+    std::cout << "What will you do?\n";
+    std::cout << "A) Distract them \n";
+    std::cout << "B) Talk to them \n";
+    std::cin >> charm;
+
+      for (int i = 0; i < 3 && charm != 'A' && charm != 'B'; i++) {
+        std::cout << "What are you doing! This is your last chance, otherwise, goodbye.\n";
+       std::cin >> charm;
+          }
+        
+      switch (charm) {
+        case 'A':
+        std::cout << "You take the torch off the sconce on the wall and hurl it in the opposite direction while yelling, 'FIRE!!!' \n";
+        std::cout << "The guards instantly snap to attention and rush pass you down the hall.\n";
+        std::cout << "You take this moment to slip into the chambers, catching the Duke unawares.\n";
+        std::cout << "The Duke cries out, 'Intruder!' before you slit his throat in front of his now screaming wife.\n";
+        std::cout << "You slip away amidst the chaos in the hall. Unfortunately, the public assassination of a duke is not without consequences.\n";
+        std::cout << "The Duke's wife describes you so thoroughly well, you are arrested and thrown into the dungeons. Your execution is at dawn.\n";
+        std::cout << "FAILED MISSION\n";
+        std::cout << "THE END\n";
+        return 0;
+        break;
+        case 'B':
+        std::cout << "You muster all your social skills to charm the guards into taking a quick break from their boring sentry duty.\n";
+        std::cout << "As they stroll away with your silver bribe, you slip into the chambers quietly.\n";
+        std::cout << "You find the Duke already in his bedclothes. Looking around, you see his wife is abed but awake. They discuss the stalled talks with Verity in low whispers.\n";
+        std::cout << "Carefully considering your options, you slip into a closet and wait until both the Duke and his wife fall asleep.\n";
+        std::cout << "With the keep under a deep silence, you creep to the Duke and rub a poisonous salve onto his wrist. He will be dead by morning.\n";
+        std::cout << "You escape from the chambers via the open garret and make your way back to Verity's chambers.\n";
+        std::cout << "MISSION ACCOMPLISHED\n";
+        std::cout << "THE END\n";
+        return 0;
+        break;
+        default:
+        for (int i = 0; i < 3 && charm != 'A' && charm != 'B'; i++) {
+        std::cout << "What are you doing! This is your last chance, otherwise, goodbye.\n";
+       std::cin >> charm;
+          }
+      }
+
+  } else {
+    for (int i = 0; i < 3 && choice != 1 && choice != 2; i++) {
+      std::cout << "What are you doing!  How are you going to get rid of the Duke? This is your last chance, otherwise, goodbye.\n";
+      std::cin >> choice;
+  }
+  }
+
+  return 0;
+}
+ 
